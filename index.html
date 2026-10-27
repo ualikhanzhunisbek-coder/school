@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#142b49">
+    <meta name="description" content="161 PARLAMENT — мектеп парламентінің ресми сайты">
+    <title>161 PARLAMENT</title>
+    <link rel="icon" type="image/jpeg" href="emblem.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="brand" href="#home" aria-label="161 PARLAMENT">
+            <img class="logo" src="emblem.jpeg" alt="Герб школы №161">
+            <div>
+                <h1>161 PARLAMENT</h1>
+                <p data-kk="Мектеп парламенті" data-ru="Школьный парламент">Мектеп парламенті</p>
+            </div>
+        </a>
+        <button id="languageBtn" class="lang-btn" type="button">RU</button>
+    </header>
+
+    <nav class="nav" aria-label="Навигация">
+        <a href="#home" data-kk="Басты бет" data-ru="Главная">Басты бет</a>
+        <a href="#news" data-kk="Жаңалықтар" data-ru="Новости">Жаңалықтар</a>
+        <a href="#events" data-kk="Іс-шаралар" data-ru="Мероприятия">Іс-шаралар</a>
+        <a href="#ideas" data-kk="Ұсыныстар" data-ru="Предложения">Ұсыныстар</a>
+        <a href="#vote" data-kk="Дауыс беру" data-ru="Голосование">Дауыс беру</a>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <img src="emblem.jpeg" alt="Герб школы №161" class="hero-logo">
+            <p class="eyebrow" data-kk="№161 МЕКТЕП • ОҚУШЫЛАР ПАРЛАМЕНТІ" data-ru="ШКОЛА №161 • УЧЕНИЧЕСКИЙ ПАРЛАМЕНТ">
+                №161 МЕКТЕП • ОҚУШЫЛАР ПАРЛАМЕНТІ
+            </p>
+            <h2 data-kk="Сенің дауысың — біздің болашағымыз" data-ru="Твой голос — наше будущее">
+                Сенің дауысың — біздің болашағымыз
+            </h2>
+            <p data-kk="Бірге ұсынамыз. Бірге шешеміз. Бірге өзгертеміз."
+                data-ru="Предлагаем вместе. Решаем вместе. Меняем вместе.">
+                Бірге ұсынамыз. Бірге шешеміз. Бірге өзгертеміз.
+            </p>
+            <a class="main-btn" href="#ideas" data-kk="Идея ұсыну" data-ru="Предложить идею">Идея ұсыну</a>
+        </section>
+
+        <section id="news" class="section">
+            <div class="section-heading">
+                <p class="eyebrow dark" data-kk="БІЗДІҢ МЕКТЕП" data-ru="НАША ШКОЛА">БІЗДІҢ МЕКТЕП</p>
+                <h2 data-kk="Жаңалықтар" data-ru="Новости">Жаңалықтар</h2>
+            </div>
+            <div id="newsList" class="grid"></div>
+        </section>
+
+        <section id="events" class="section alternate">
+            <div class="section-heading">
+                <p class="eyebrow dark" data-kk="БЕЛСЕНДІ МЕКТЕП ӨМІРІ" data-ru="АКТИВНАЯ ШКОЛЬНАЯ ЖИЗНЬ">
+                    БЕЛСЕНДІ МЕКТЕП ӨМІРІ
+                </p>
+                <h2 data-kk="Іс-шаралар" data-ru="Мероприятия">Іс-шаралар</h2>
+            </div>
+            <div id="eventsList" class="grid"></div>
+        </section>
+
+        <section id="ideas" class="section">
+            <div class="section-heading">
+                <p class="eyebrow dark" data-kk="СЕНІҢ ПІКІРІҢ МАҢЫЗДЫ" data-ru="ТВОЁ МНЕНИЕ ВАЖНО">
+                    СЕНІҢ ПІКІРІҢ МАҢЫЗДЫ
+                </p>
+                <h2 data-kk="Ұсыныс қалдыр" data-ru="Оставь предложение">
+                    Ұсыныс қалдыр
+                </h2>
+                <p data-kk="Мектеп өмірін жақсарту туралы идеяңды жаз."
+                    data-ru="Напиши идею, которая поможет улучшить школьную жизнь.">
+                    Мектеп өмірін жақсарту туралы идеяңды жаз.
+                </p>
+            </div>
+            <form id="ideaForm" class="form-card">
+                <label for="idea" data-kk="Сенің идеяң" data-ru="Твоя идея">
+                    Сенің идеяң
+                </label>
+                <textarea id="idea" maxlength="500" required
+                    placeholder="Идеяңды жаз... / Напиши свою идею..."></textarea>
+                <label class="anonymous">
+                    <input type="checkbox" id="anonymous" checked>
+                    <span data-kk="Анонимді түрде жіберу" data-ru="Отправить анонимно">Анонимді түрде жіберу</span>
+                </label>
+                <button class="main-btn" type="submit" data-kk="Ұсынысты жіберу" data-ru="Отправить предложение">
+                    Ұсынысты жіберу
+                </button>
+                <p id="ideaMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="vote" class="section alternate">
+            <div class="section-heading">
+                <p class="eyebrow dark" data-kk="ОРТАҚ ШЕШІМ" data-ru="ОБЩЕЕ РЕШЕНИЕ">ОРТАҚ ШЕШІМ</p>
+                <h2 data-kk="Дауыс беру" data-ru="Голосование">Дауыс беру</h2>
+                <p data-kk="Қандай іс-шара өткізгіміз келеді?" data-ru="Какое мероприятие мы хотим провести?">
+                    Қандай іс-шара өткізгіміз келеді?
+                </p>
+            </div>
+            <div id="pollList"></div>
+            <p id="voteMessage" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="emblem.jpeg" alt="" class="footer-logo">
+        <h2>161 PARLAMENT</h2>
+        <p data-kk="Оқушылар үні. Ортақ шешім." data-ru="Голос учеников. Общие решения.">
+            Оқушылар үні. Ортақ шешім.
+        </p>
+        <p class="copyright">© <span id="year"></span> 161 PARLAMENT</p>
+    </footer>
+</body>
+
+</html>
